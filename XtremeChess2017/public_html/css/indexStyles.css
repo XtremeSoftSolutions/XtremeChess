@@ -1,0 +1,136 @@
+#div-loader{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url("../img/loader.gif");
+    background-repeat: no-repeat;
+    background-position: center center;
+    z-index: 99999;
+    background-color: white;
+}
+#top{
+    height: 0px;
+}
+#board{
+    background-color: #ecf0f1;
+}
+#realBoard{
+    background-color: #2980b9;
+}
+/*Labels*/
+.label18{
+    color: white;
+    height: 80px;
+    width: 70px;
+    font-size: 14px ;
+    font-weight: bold !important;
+    text-align: right !important;
+    vertical-align: middle !important;
+}
+.labelAH{
+    color: white;
+    height: 30px;
+    width: 80px;
+    font-size: 14px;
+    font-weight: bold !important;
+    text-align: left !important;
+    vertical-align: middle !important;
+}
+/*squares-board*/
+.square{
+    height: 80px;
+    width: 80px;
+    font-size: 50px;
+    text-align: center;
+    vertical-align: middle;
+    /*transitions*/
+    transition: box-shadow 0.25s ease-out;
+    transition: background-color 0.25s ease-in time;
+}
+.square-black{
+    background-color: #bdc3c7; /*#7f8c8d*/
+}
+.square-white{
+    background-color: #ecf0f1;
+}
+/*-----Chess Pieces------*/
+.chessPiece{
+    /**/
+    position: absolute;
+/*    border-radius: 5%;*/
+    z-index: 10;
+    /**/
+    height: 80px;
+    width: 80px;
+    font-size: 50px;
+    text-align: center;
+/*       display: table-cell;*/
+    vertical-align: middle;
+    /*movement*/
+    transition: top 0.35s ease-in-out, left 0.35s ease-in-out;
+    transition: box-shadow 0.25s ease-out;
+
+}
+.chessPieceHover{
+    cursor: pointer;
+    -webkit-box-shadow: inset 0px 0px 6px 10px rgba(243, 156, 18, .8);
+    box-shadow: inset 0px 0px 6px 10px rgba(243, 156, 18, .8);
+/*    background-color: white;*/
+    /*movement*/
+    transition: box-shadow 0.25s ease-out;
+    transition: background-color 0.25s ease-in time;
+}
+/*After clicked actually :-)*/
+.pieceHover{
+    cursor: pointer;
+    -webkit-box-shadow: inset 0px 0px 6px 10px rgba(230, 126, 34, .8);
+    box-shadow: inset 0px 0px 6px 10px rgba(230, 126, 34, .8);
+/*    background-color: white;*/
+}
+.pieceInDanger{
+    cursor: pointer;
+    -webkit-box-shadow: inset 0px 0px 3px 7px rgba(231, 76, 60, .7);
+    box-shadow: inset 0px 0px 3px 7px rgba(231, 76, 60, .7);
+/*    background-color: white;*/
+}
+.black:hover{
+
+}
+.white:hover{
+    /*    -webkit-box-shadow: inset 0px 0px 5px 5px rgba(50, 150, 25, .5);
+        box-shadow: inset 0px 0px 5px 5px rgba(50, 150, 25, .5);*/
+}
+.pawn{
+
+}
+.rock{
+
+}
+.knight{
+
+}
+.bishop{
+
+}
+.queen{
+
+}
+.king{
+
+}
+/*=======Movements============*/
+/*.moveSmoothly{
+    transition: top 0.35s ease-in-out, left 0.35s ease-in-out;
+}
+.fadeSmoothly{
+    transition: box-shadow 0.25s ease-out;
+    transition: background-color 0.25s ease-in time;
+}*/
+.selectPath{
+    -webkit-box-shadow: inset 0px 0px 3px 7px rgba(39, 174, 96, .8);
+    box-shadow: inset 0px 0px 3px 7px rgba(39, 174, 96, .8);
+    /*opacity: 0.5;*/
+    /*background-color: white;*/
+}

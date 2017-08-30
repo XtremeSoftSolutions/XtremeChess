@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>ChessXtreme</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- Loading Bootstrap -->
+        <link type="text/css" href="css/vendor/bootstrap/css/bootstrap.css" rel="stylesheet">
+
+        <!-- Loading Flat UI -->
+        <link type="text/css" href="css/flat-ui.css" rel="stylesheet">
+        <!-- Loading User-Defined styles -->
+        <link type="text/css" href="css/indexStyles.css" rel="stylesheet">
+
+        <!-- Loading favicon -->
+        <link rel="shortcut icon" href="img/chess.png">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
+        <!--[if lt IE 9]>
+          <script src="js/vendor/html5shiv.js"></script>
+          <script src="js/vendor/respond.min.js"></script>
+        <![endif]-->
+    </head>
+    <body>
+        <div id="div-loader"></div>
+        <div class="container">
+            <div class="row" id="top"></div>
+            <div class="row" id="board">
+                <div class="col-lg-1 col-md-1"></div>
+                <div class="col-lg-10 col-md-10" id="realBoard">
+                    <br>
+                    <div class="col-lg-1 col-md-1"></div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="row label18">8</div>
+                        <div class="row label18">7</div>
+                        <div class="row label18">6</div>
+                        <div class="row label18">5</div>
+                        <div class="row label18">4</div>
+                        <div class="row label18">3</div>
+                        <div class="row label18">2</div>
+                        <div class="row label18">1</div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="row square square-white" id="A8"><div class="black rock chessPiece" id="blackRockLeft">&#9820</div></div>
+                        <div class="row square square-black" id="A7"><div class="black pawn chessPiece" id="blackPawnA">&#9823</div></div>
+                        <div class="row square square-white" id="A6"></div>
+                        <div class="row square square-black" id="A5"></div>
+                        <div class="row square square-white" id="A4"></div>
+                        <div class="row square square-black" id="A3"></div>
+                        <div class="row square square-white" id="A2"><div class="white pawn chessPiece" id="whitePawnA">&#9817</div></div>
+                        <div class="row square square-black" id="A1"><div class="white rock chessPiece" id="whiteRockLeft">&#9814</div></div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="row square square-black" id="B8"><div class="black knight chessPiece" id="blackKnightLeft">&#9822</div></div>
+                        <div class="row square square-white" id="B7"><div class="black pawn chessPiece" id="blackPawnB">&#9823</div></div>
+                        <div class="row square square-black" id="B6"></div>
+                        <div class="row square square-white" id="B5"></div>
+                        <div class="row square square-black" id="B4"></div>
+                        <div class="row square square-white" id="B3"></div>
+                        <div class="row square square-black" id="B2"><div class="white pawn chessPiece" id="whitePawnB">&#9817</div></div>
+                        <div class="row square square-white" id="B1"><div class="white knight chessPiece" id="whiteKnightLeft">&#9816</div></div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="row square square-white" id="C8"><div class="black bishop chessPiece" id="blackBishopLeft">&#9821</div></div>
+                        <div class="row square square-black" id="C7"><div class="black pawn chessPiece" id="blackPawnC">&#9823</div></div>
+                        <div class="row square square-white" id="C6"></div>
+                        <div class="row square square-black" id="C5"></div>
+                        <div class="row square square-white" id="C4"></div>
+                        <div class="row square square-black" id="C3"></div>
+                        <div class="row square square-white" id="C2"><div class="white pawn chessPiece" id="whitePawnC">&#9817</div></div>
+                        <div class="row square square-black" id="C1"><div class="white bishop chessPiece" id="whiteBishopLeft">&#9815</div></div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="row square square-black" id="D8"><div class="black queen chessPiece" id="blackQueen">&#9819</div></div>
+                        <div class="row square square-white" id="D7"><div class="black pawn chessPiece" id="blackPawnD">&#9823</div></div>
+                        <div class="row square square-black" id="D6"></div>
+                        <div class="row square square-white" id="D5"></div>
+                        <div class="row square square-black" id="D4"></div>
+                        <div class="row square square-white" id="D3"></div>
+                        <div class="row square square-black" id="D2"><div class="white pawn chessPiece" id="whitePawnD">&#9817</div></div>
+                        <div class="row square square-white" id="D1"><div class="white queen chessPiece" id="whiteQueen">&#9813</div></div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="row square square-white" id="E8"><div class="black king chessPiece" id="blackKing">&#9818</div></div>
+                        <div class="row square square-black" id="E7"><div class="black pawn chessPiece" id="blackPawnE">&#9823</div></div>
+                        <div class="row square square-white" id="E6"></div>
+                        <div class="row square square-black" id="E5"></div>
+                        <div class="row square square-white" id="E4"></div>
+                        <div class="row square square-black" id="E3"></div>
+                        <div class="row square square-white" id="E2"><div class="white pawn chessPiece" id="whitePawnE">&#9817</div></div>
+                        <div class="row square square-black" id="E1"><div class="white king chessPiece" id="whiteKing">&#9812</div></div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="row square square-black" id="F8"><div class="black bishop chessPiece" id="blackBishopRight">&#9821</div></div>
+                        <div class="row square square-white" id="F7"><div class="black pawn chessPiece" id="blackPawnF">&#9823</div></div>
+                        <div class="row square square-black" id="F6"></div>
+                        <div class="row square square-white" id="F5"></div>
+                        <div class="row square square-black" id="F4"></div>
+                        <div class="row square square-white" id="F3"></div>
+                        <div class="row square square-black" id="F2"><div class="white pawn chessPiece" id="whitePawnF">&#9817</div></div>
+                        <div class="row square square-white" id="F1"><div class="white bishop chessPiece" id="whiteBishopRight">&#9815</div></div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="row square square-white" id="G8"><div class="black knight chessPiece" id="blackKnightRight">&#9822</div></div>
+                        <div class="row square square-black" id="G7"><div class="black pawn chessPiece" id="blackPawnG">&#9823</div></div>
+                        <div class="row square square-white" id="G6"></div>
+                        <div class="row square square-black" id="G5"></div>
+                        <div class="row square square-white" id="G4"></div>
+                        <div class="row square square-black" id="G3"></div>
+                        <div class="row square square-white" id="G2"><div class="white pawn chessPiece" id="whitePawnG">&#9817</div></div>
+                        <div class="row square square-black" id="G1"><div class="white knight chessPiece" id="whiteKnightRight">&#9816</div></div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="row square square-black" id="H8"><div class="black rock chessPiece" id="blackRockRight">&#9820</div></div>
+                        <div class="row square square-white" id="H7"><div class="black pawn chessPiece" id="blackPawnH">&#9823</div></div>
+                        <div class="row square square-black" id="H6"></div>
+                        <div class="row square square-white" id="H5"></div>
+                        <div class="row square square-black" id="H4"></div>
+                        <div class="row square square-white" id="H3"></div>
+                        <div class="row square square-black" id="H2"><div class="white pawn chessPiece" id="whitePawnH">&#9817</div></div>
+                        <div class="row square square-white" id="H1"><div class="white rock chessPiece" id="whiteRockRight">&#9814</div></div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="row label18"></div>
+                        <div class="row label18"></div>
+                        <div class="row label18"></div>
+                        <div class="row label18"></div>
+                        <div class="row label18"></div>
+                        <div class="row label18"></div>
+                        <div class="row label18"></div>
+                        <div class="row label18"></div>
+                    </div>
+                    <div class="col-lg-1 col-md-1"></div>
+                </div>
+                <div class="col-lg-1 col-md-1"></div>
+            </div>
+            <div class="row" style="background-color: #ecf0f1">
+                <div class="col-lg-1 col-md-1"></div>
+                <div class="col-lg-10 col-md-10" style="background-color: #2980b9" id="bottomFrame">
+                    <div class="col-lg-1 col-md-1"></div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="labelAH"></div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="labelAH">A</div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="labelAH">B</div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="labelAH">C</div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="labelAH">D</div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="labelAH">E</div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="labelAH">F</div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="labelAH">G</div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="labelAH">H</div>
+                    </div>
+                    <div class="col-lg-1 col-md-1">
+                        <div class="labelAH"></div>
+                    </div>
+                    <div class="col-lg-1 col-md-1"></div>
+                </div>
+                <div class="col-lg-1 col-md-1"></div>
+            </div>
+        </div>
+        <!-- /.container -->
+
+
+
+        <!-- jQuery (necessary for Flat UI's JavaScript plugins) -->
+        <script type="text/javascript" src="js/vendor/jquery.min.js"></script>
+
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script type="text/javascript" src="js/flat-ui.js"></script>
+        <script type="text/javascript" src="js/myScript.js"></script>
+        <script type="text/javascript" src="js/vendor/bootstrap.js"></script>
+        <script type="text/javascript" src="js/vendor/video.js"></script>
+
+
+        <script type="text/javascript" src="js/big.min.js"></script>
+
+    </body>
+</html>
